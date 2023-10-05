@@ -12,7 +12,7 @@ print("\tdone")
 import json as js
 import sys
 import datetime
-args = sys.argv[1:]
+cmd_args = sys.argv[1:]
 
 #key=input("Hey gimme ur key: ")
 key = [
@@ -25,20 +25,6 @@ print(f"{key[1]} ||| {key[2]}")
 tba = tbapy.TBA(key[0])
 #tba = tbapy.TBA('key', 'ID', 'secret', 'event_key')
 
-
-eventMap = {
-	"casf": "San Francisco Regional",
-	"casj": "Silicon Valley Regional",
-	"cacc": "Central Valley Regional"#?
-}
-def codesToEvents(keys):
-	out=[]
-	for k in keys:
-		if k in eventMap.keys():
-			out.append(eventMap[k])
-			continue
-		out.append(k)
-	return out
 
 # code code code code code code code
 team = tba.team(199)
